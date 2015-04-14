@@ -9,7 +9,7 @@ Esta pasta contem os seguintes arquivos:
 - wildfly-init-debian.sh: para ser usado com distribuições baseadas no Debian (Debian, Ubuntu)
 - wildfly.conf: arquivo que contem as configurações usadas pelos arquivos acima
 
-O primeiro passo é copiar o shell script equivalente a sua distribuição do Linux para dentro da pasta /ect/init.d.
+O primeiro passo é copiar o shell script equivalente a sua distribuição do Linux para dentro da pasta /etc/init.d.
 
 ```
 cp wildfly-init-redhat.sh /etc/init.d/wildfly
@@ -17,7 +17,7 @@ ou
 cp wildfly-init-debian.sh /etc/init.d/wildfly
 ```
 
-Copie também o arquivo wildfly.conf para um local específico esperado pelos scripts:
+Copie também o arquivo wildfly.conf (os scripts esperam que esteja numa determinada pasta):
 ```
 mkdir –p /etc/default
 cp wildfly.conf /etc/default
@@ -64,10 +64,3 @@ service wildfly  stop
 ou
 /etc/init.d/wildfly stop
 ```
-
-
-
-
-
-
-
